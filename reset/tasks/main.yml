@@ -1,0 +1,9 @@
+---
+- name: delete awx namespace
+  shell: kubectl delete namespace awx
+
+- name: remove operator
+  file:
+    path: /srv/checkout/awx-operator
+    state: absent
+
